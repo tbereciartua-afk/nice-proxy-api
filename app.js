@@ -91,10 +91,10 @@ app.get("/init-db", async (req, res) => {
       insert into customers 
       (customer_id, first_name, last_name, points, balance, risk_level, status, segment, credit_limit, delinquent, notes)
       values
-      ('CUST-1001', 'Sofia',  'Perez',   1250,  320.50, 'low',    'active',  'gold',     5000, false, 'Cliente premium'),
-      ('CUST-1002', 'Martin', 'Gomez',    120, -45.10, 'medium', 'active',  'silver',   1500, true,  'Cliente con mora'),
-      ('CUST-1003', 'Camila', 'Lopez',   3200,  980.00, 'low',    'active',  'gold',     8000, false, 'Alta actividad'),
-      ('CUST-1004', 'Juan',   'Diaz',      20,   10.00, 'high',   'blocked', 'standard',  500, true,  'Riesgo alto')
+      ('1001', 'Sofia',  'Perez',   1250,  320.50, 'low',    'active',  'gold',     5000, false, 'Cliente premium'),
+      ('1002', 'Martin', 'Gomez',    120, -45.10, 'medium', 'active',  'silver',   1500, true,  'Cliente con mora'),
+      ('1003', 'Camila', 'Lopez',   3200,  980.00, 'low',    'active',  'gold',     8000, false, 'Alta actividad'),
+      ('1004', 'Juan',   'Diaz',      20,   10.00, 'high',   'blocked', 'standard',  500, true,  'Riesgo alto')
       on conflict (customer_id) do nothing;
     `);
 
